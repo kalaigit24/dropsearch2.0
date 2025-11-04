@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DigiMark Agency - Yellow Theme</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body { font-family: 'Arial', sans-serif; scroll-behavior: smooth; }
-    a { text-decoration: none; }
+    body {
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+    }
 
     /* Common yellow accent */
-    .yellow-bg { background-color: #FFD700; }
-    .yellow-text { color: #FFD700; }
+    .yellow-bg {
+      background-color: #FFD700;
+    }
+
+    .yellow-text {
+      color: #FFD700;
+    }
 
     /* Navbar */
-    .navbar { background-color: #222; }
-    .navbar .nav-link { color: #fff !important; }
-    .navbar .nav-link:hover { color: #FFD700 !important; }
+    .navbar {
+      background-color: #222;
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+
+    .navbar .nav-link:hover {
+      color: #FFD700 !important;
+    }
 
     /* Hero Section */
     #hero {
@@ -31,445 +53,535 @@
       text-align: center;
       position: relative;
     }
+
     #hero::after {
       content: "";
       position: absolute;
-      top:0; left:0; width:100%; height:100%;
-      background-color: rgba(0,0,0,0.6);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
     }
+
     #hero .content {
       position: relative;
       z-index: 2;
     }
-   
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold yellow-text" href="#">DigiMark Agency</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold text-warning" href="#">
+        DigiMark <span class="text-light">Agency</span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Nav Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">OUR SERVICES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work">OUR WORK</a></li>
-          <li class="nav-item"><a class="nav-link" href="#case-study">CASE STUDY</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">TESTIMONIALS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">GET IN TOUCH</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link text-light fw-medium px-3" href="#about">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-medium px-3" href="#services">OUR SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-medium px-3" href="#work">OUR WORK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-medium px-3" href="#cases">CASE STUDY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-medium px-3" href="#testimonials">TESTIMONIALS</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-warning text-dark fw-semibold ms-lg-3 mt-2 mt-lg-0 px-4 py-2" href="#contact">
+              GET IN TOUCH
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+
   <!-- Hero Section -->
-  <section id="hero">
-    <div class="container content">
-      <h1>Grow Your Business Digitally</h1>
-      <p>We provide cutting-edge digital marketing solutions with a creative touch.</p>
-      <a href="#contact" class="btn btn-warning btn-lg">Get Started</a>
+  <section id="hero" class="position-relative text-center text-white d-flex align-items-center justify-content-center"
+    style="min-height: 100vh; overflow: hidden;">
+    <!-- 🔹 Background Image -->
+    <div class="position-absolute top-0 start-0 w-100 h-100">
+      <img src="assets/hero-banner.jpg" alt="Digital Marketing Agency" class="w-100 h-100 object-fit-cover opacity-50">
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.75);"></div>
     </div>
+
+    <!-- 🔹 Content -->
+    <div class="container position-relative z-3">
+      <div class="content mx-auto" style="max-width: 800px;">
+        <h1 class="display-4 fw-bold mb-4 text-uppercase">
+          Grow Your Business <span class="text-warning">Digitally</span>
+        </h1>
+        <p class="lead mb-5 text-light">
+          We provide cutting-edge digital marketing solutions with a creative touch.
+        </p>
+        <a href="#contact" class="btn btn-warning btn-lg fw-semibold px-5 py-3 shadow-lg">
+          Get Started
+        </a>
+      </div>
+    </div>
+
+    <!-- 🔹 Scroll Indicator -->
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+      <div class="rounded-pill border border-warning" style="width: 30px; height: 50px; position: relative;">
+        <div class="bg-warning rounded-pill position-absolute top-2 start-50 translate-middle-x"
+          style="width: 6px; height: 12px; animation: bounce 1.5s infinite;"></div>
+      </div>
+    </div>
+
+    <!-- 🔹 Animation -->
+    <style>
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+        }
+
+        50% {
+          transform: translate(-50%, 10px);
+        }
+      }
+    </style>
   </section>
+
 
   <!-- About Us -->
-  <section id="about" class="block block-yellow">
-    <section id="about" className="py-24 bg-secondary/50">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Founder Card */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-primary opacity-20 blur-2xl rounded-full"></div>
-              <div className="relative bg-card rounded-2xl p-8 border border-border shadow-glow">
-                <img
-                  src={founderImage}
-                  alt="Prasanth Subramanian - Founder"
-                  className="w-48 h-48 rounded-full object-cover mx-auto mb-6 border-4 border-primary"
-                />
-                <h3 className="text-2xl font-bold text-center mb-2">Prasanth Subramanian</h3>
-                <p className="text-primary text-center font-semibold">Founder of Dsignxt</p>
-              </div>
-            </div>
-          </div>
+  <section id="about" class="about-section" >
+    <div class="container">
+      <div class="about-grid">
 
-          {/* About Content */}
-          <div className="space-y-6">
-            <div>
-              <p className="text-primary text-sm font-bold uppercase tracking-wider mb-2">
-                ABOUT DSIGNXT
-              </p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Bold Ideas. <span className="text-primary">Real Impact.</span>
-              </h2>
-            </div>
-
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Founded by Prashanth, Creative Director with over 13 years of experience in 
-              Branding, Design & Digital Strategy, Dsignxt was built to transform ambitious 
-              brands and disruptive startups into industry leaders.
-            </p>
-
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              From global brand collaborations to launching a full-stack agency in Chennai, 
-              Bangalore, and Texas, our journey is driven by passion and experience. We partner 
-              with bold startups and growing businesses to make them visible, profitable, and 
-              unforgettable—breaking barriers along the way.
-            </p>
+        <!-- Founder Card -->
+        <div class="founder-card">
+          <div class="founder-glow"></div>
+          <div class="founder-inner">
+            <img src="assets/founder.jpg" alt="Prasanth Subramanian - Founder" class="founder-img">
+            <h3>Prasanth Subramanian</h3>
+            <p class="role">Founder of Dsignxt</p>
           </div>
         </div>
+
+        <!-- About Content -->
+        <div class="about-content">
+          <p class="section-label">ABOUT DSIGNXT</p>
+          <h2>Bold Ideas. <span class="highlight">Real Impact.</span></h2>
+          <p>
+            Founded by Prashanth, Creative Director with over 13 years of experience in
+            Branding, Design & Digital Strategy, Dsignxt was built to transform ambitious
+            brands and disruptive startups into industry leaders.
+          </p>
+          <p>
+            From global brand collaborations to launching a full-stack agency in Chennai,
+            Bangalore, and Texas, our journey is driven by passion and experience. We partner
+            with bold startups and growing businesses to make them visible, profitable, and
+            unforgettable—breaking barriers along the way.
+          </p>
+        </div>
+
       </div>
-    </section>
+    </div>
   </section>
+
 
   <!-- Services -->
-  <section id="services">
+  <section id="services" class="services-section">
     <div class="container">
-      <h2 class="text-center mb-5 yellow-text">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <i class="fas fa-search fa-3x mb-3 yellow-text"></i>
-            <h5>SEO & SEM</h5>
-            <p>Boost visibility with search optimization and Google Ads campaigns.</p>
-          </div>
+      <div class="section-header">
+        <h2>Our <span class="highlight">Services</span></h2>
+        <p>
+          From branding and marketing to visuals and consulting, we deliver solutions
+          that elevate your brand and drive measurable growth.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-bullseye"></i></div>
+          <h3>End-to-End ROI & Business Consulting</h3>
+          <p>
+            We align business goals with creative strategies to deliver measurable growth.
+            From ROI planning to execution, every step is designed to maximise impact.
+          </p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <i class="fas fa-bullhorn fa-3x mb-3 yellow-text"></i>
-            <h5>Social Media Marketing</h5>
-            <p>Engage audiences across Facebook, Instagram, LinkedIn, YouTube, and more.</p>
-          </div>
+
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-palette"></i></div>
+          <h3>Branding, Design & Development</h3>
+          <p>
+            From logos to full-scale brand identities, we create designs that resonate
+            with audiences and development solutions that perform.
+          </p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <i class="fas fa-envelope fa-3x mb-3 yellow-text"></i>
-            <h5>Content & Email Marketing</h5>
-            <p>Create compelling content and email campaigns that convert.</p>
-          </div>
+
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Performance Marketing & SEO</h3>
+          <p>
+            Data-driven campaigns that deliver results. We optimize every channel
+            to ensure maximum ROI and sustainable growth.
+          </p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <i class="fas fa-mobile-alt fa-3x mb-3 yellow-text"></i>
-            <h5>Mobile Marketing</h5>
-            <p>SMS campaigns, app promotions, and mobile-first strategies.</p>
-          </div>
+
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-users"></i></div>
+          <h3>Social Media & Content Marketing</h3>
+          <p>
+            Engaging content that builds communities and drives conversions.
+            We create stories that connect with your audience.
+          </p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <i class="fas fa-paint-brush fa-3x mb-3 yellow-text"></i>
-            <h5>Web & Creative Services</h5>
-            <p>Website design, branding, UI/UX, graphic design, video content.</p>
-          </div>
+
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-code"></i></div>
+          <h3>Web & App Development</h3>
+          <p>
+            Cutting-edge digital solutions built for performance and scalability.
+            We transform ideas into powerful digital experiences.
+          </p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <i class="fas fa-chart-line fa-3x mb-3 yellow-text"></i>
-            <h5>Analytics & Strategy</h5>
-            <p>Marketing strategy, CRO, data analytics, automation, ORM.</p>
-          </div>
+
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-award"></i></div>
+          <h3>Strategic Brand Consulting</h3>
+          <p>
+            Expert guidance to position your brand for success. We help you navigate
+            market challenges and seize opportunities.
+          </p>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Our Work / Portfolio -->
-  <section id="work" class="block block-yellow">
+  <section id="work" class="work-section">
     <div class="container">
-      <h2 class="text-center mb-5">Our Work</h2>
-      <div class="row g-4">
-        <div class="col-md-4 portfolio-item"><img src="https://source.unsplash.com/600x400/?website" alt="Work 1"></div>
-        <div class="col-md-4 portfolio-item"><img src="https://source.unsplash.com/600x400/?marketing" alt="Work 2"></div>
-        <div class="col-md-4 portfolio-item"><img src="https://source.unsplash.com/600x400/?social-media" alt="Work 3"></div>
+      <h2 class="section-title text-center">Our Work</h2>
+
+      <div class="work-grid">
+        <div class="work-item">
+          <img src="assets/hero-banner.jpg" alt="Work 1">
+        </div>
+        <div class="work-item">
+          <img src="assets/hero-banner.jpg" alt="Work 2">
+        </div>
+        <div class="work-item">
+          <img src="assets/hero-banner.jpg" alt="Work 3">
+        </div>
+        <!-- You can add more work items here -->
       </div>
     </div>
   </section>
 
+
   <!-- Case Study -->
-  <section id="case-study">
+  <section id="cases" class="cases-section">
     <div class="container">
-      <h2 class="text-center mb-5 yellow-text">Case Studies</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card p-3">
-            <h5>Client: ABC Corp</h5>
-            <p>Increased organic traffic by 80% in 6 months using SEO & content strategy.</p>
+      <!-- Section Header -->
+      <div class="section-header text-center">
+        <h2>Our <span class="highlight">Success Stories</span></h2>
+        <p>
+          Discover how we’ve helped brands grow, innovate, and transform digitally.
+        </p>
+      </div>
+
+      <!-- Case Studies Grid -->
+      <div class="cases-grid">
+        <!-- Case 1 -->
+        <div class="case-card">
+          <span class="category">Digital Marketing</span>
+          <h3>E-Commerce Growth Strategy</h3>
+          <p>
+            We redefined their online presence, leading to a massive boost in revenue and customer retention.
+          </p>
+          <div class="case-result">
+            <div>
+              <p class="result-label">Result</p>
+              <p class="result-value">300% Revenue Growth</p>
+            </div>
+            <span class="arrow">→</span>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card p-3">
-            <h5>Client: XYZ Startup</h5>
-            <p>Implemented social media campaigns that boosted engagement by 120%.</p>
+
+        <!-- Case 2 -->
+        <div class="case-card">
+          <span class="category">Branding & Design</span>
+          <h3>Brand Identity Redesign</h3>
+          <p>
+            A complete rebranding with fresh visuals and tone that resonated deeply with their target audience.
+          </p>
+          <div class="case-result">
+            <div>
+              <p class="result-label">Result</p>
+              <p class="result-value">50% More Brand Recognition</p>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="case-card">
+          <span class="category">Development</span>
+          <h3>SaaS Platform Launch</h3>
+          <p>
+            End-to-end product design and development for a scalable SaaS solution that grew rapidly post-launch.
+          </p>
+          <div class="case-result">
+            <div>
+              <p class="result-label">Result</p>
+              <p class="result-value">10K+ Active Users</p>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="case-card">
+          <span class="category">Content Marketing</span>
+          <h3>Social Media Campaign</h3>
+          <p>
+            An innovative campaign that captured attention and drove unmatched social engagement.
+          </p>
+          <div class="case-result">
+            <div>
+              <p class="result-label">Result</p>
+              <p class="result-value">2M+ Impressions</p>
+            </div>
+            <span class="arrow">→</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Testimonials -->
   <!-- Testimonials Section -->
-<section id="testimonials" class="py-5 block block-yellow">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="text-4xl fw-bold mb-3">
-        What Our <span class="yellow-text">Clients Say</span>
-      </h2>
-      <p class="text-muted mx-auto" style="max-width:600px;">
-        Don't just take our word for it. Here's what our clients have to say about working with us.
-      </p>
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header text-center">
+        <h2>What Our <span class="highlight">Clients Say</span></h2>
+        <p>
+          Don't just take our word for it. Here's what our clients have to say about working with us.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-content">
+            "Working with Dsignxt transformed our digital presence completely. Their strategic approach and creative
+            execution exceeded all expectations."
+          </p>
+          <div class="testimonial-footer">
+            <p class="testimonial-name">Sarah Johnson</p>
+            <p class="testimonial-position">CEO, TechStart Inc</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-content">
+            "The ROI we've seen from their campaigns is incredible. They truly understand how to connect brands with
+            their audience."
+          </p>
+          <div class="testimonial-footer">
+            <p class="testimonial-name">Michael Chen</p>
+            <p class="testimonial-position">Marketing Director, GrowthCo</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-content">
+            "From branding to development, every touchpoint was handled with professionalism and creativity. Highly
+            recommend!"
+          </p>
+          <div class="testimonial-footer">
+            <p class="testimonial-name">Emily Rodriguez</p>
+            <p class="testimonial-position">Founder, StyleHub</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="row g-4">
-      <!-- Testimonial 1 -->
-      <div class="col-md-4">
-        <div class="card p-4 border-0 shadow-sm h-100">
-          <div class="mb-3">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-          <p class="fst-italic text-muted mb-4">
-            "Working with Dsignxt transformed our digital presence completely. Their strategic approach and creative execution exceeded all expectations."
-          </p>
-          <div class="border-top pt-3">
-            <p class="fw-bold mb-0">Sarah Johnson</p>
-            <p class="text-warning small">CEO, TechStart Inc</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonial 2 -->
-      <div class="col-md-4">
-        <div class="card p-4 border-0 shadow-sm h-100">
-          <div class="mb-3">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-          <p class="fst-italic text-muted mb-4">
-            "The ROI we've seen from their campaigns is incredible. They truly understand how to connect brands with their audience."
-          </p>
-          <div class="border-top pt-3">
-            <p class="fw-bold mb-0">Michael Chen</p>
-            <p class="text-warning small">Marketing Director, GrowthCo</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="col-md-4">
-        <div class="card p-4 border-0 shadow-sm h-100">
-          <div class="mb-3">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-          <p class="fst-italic text-muted mb-4">
-            "From branding to development, every touchpoint was handled with professionalism and creativity. Highly recommend!"
-          </p>
-          <div class="border-top pt-3">
-            <p class="fw-bold mb-0">Emily Rodriguez</p>
-            <p class="text-warning small">Founder, StyleHub</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
   <!-- Contact -->
-     <section id="contact" className="py-24 bg-secondary/50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's Start <span className="text-primary">Something Great</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Ready to take your brand to the next level? Get in touch with us today.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="bg-card border-border p-8">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Name *</label>
-                  <Input 
-                    placeholder="Your name" 
-                    className="bg-secondary border-border"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email *</label>
-                  <Input 
-                    type="email" 
-                    placeholder="your@email.com" 
-                    className="bg-secondary border-border"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2">Phone Number</label>
-                <Input 
-                  type="tel" 
-                  placeholder="+91 00000 00000" 
-                  className="bg-secondary border-border"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2">Service Required</label>
-                <Input 
-                  placeholder="e.g., Digital Marketing, Branding" 
-                  className="bg-secondary border-border"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
-                <Textarea 
-                  placeholder="Tell us about your project..." 
-                  rows={5}
-                  className="bg-secondary border-border"
-                />
-              </div>
-
-              <Button 
-                type="submit" 
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow"
-                size="lg"
-              >
-                SUBMIT & CONNECT WITH US
-              </Button>
-            </form>
-          </Card>
-
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                We're here to help you grow your business. Reach out to us through any of 
-                the following channels, and let's discuss how we can work together.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">Email</p>
-                  <p className="text-muted-foreground">dhanabal@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">Phone</p>
-                  <p className="text-muted-foreground">+91 7418442735</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">Locations</p>
-                  <p className="text-muted-foreground">Chennai | Coimbatore </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header text-center">
+        <h2>Let's Start <span class="highlight">Something Great</span></h2>
+        <p>
+          Ready to take your brand to the next level? Get in touch with us today.
+        </p>
       </div>
-    </section>
 
-  <!-- Footer -->
-   <footer className="bg-card border-t border-border py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-primary mb-4">Dropsearch</h3>
-            <p className="text-muted-foreground max-w-md">
-              Transforming ambitious brands and disruptive startups into industry leaders 
-              through strategic design and digital marketing.
+      <!-- Contact Grid -->
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-card">
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name *</label>
+                <input type="text" placeholder="Your name" />
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="your@email.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 00000 00000" />
+            </div>
+
+            <div class="form-group">
+              <label>Service Required</label>
+              <input type="text" placeholder="e.g., Digital Marketing, Branding" />
+            </div>
+
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell us about your project..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">SUBMIT & CONNECT WITH US</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div>
+            <h3>Get in Touch</h3>
+            <p>
+              We're here to help you grow your business. Reach out to us through any of
+              the following channels, and let's discuss how we can work together.
             </p>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#cases" className="text-muted-foreground hover:text-primary transition-colors">
-                  Case Studies
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">
-                  Testimonials
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div class="info-list">
+            <div class="info-item">
+              <div class="icon">📧</div>
+              <div>
+                <p class="label">Email</p>
+                <p>dhanabal@gmail.com</p>
+              </div>
+            </div>
 
-          <div>
-            <h4 className="font-bold mb-4">Contact</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>dhanabal@gmail.com</li>
-              <li>+91 7418442735</li>
-              <li>Chennai | Coimbatore </li>
-            </ul>
-          </div>
-        </div>
+            <div class="info-item">
+              <div class="icon">📞</div>
+              <div>
+                <p class="label">Phone</p>
+                <p>+91 7418442735</p>
+              </div>
+            </div>
 
-        {/* Copyright */}
-        <div className="border-t border-border pt-8 text-center text-muted-foreground">
-          <p>&copy; Dropsearch. All rights reserved.</p>
+            <div class="info-item">
+              <div class="icon">📍</div>
+              <div>
+                <p class="label">Locations</p>
+                <p>Chennai | Coimbatore</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <h3>Dropsearch</h3>
+          <p>
+            Transforming ambitious brands and disruptive startups into industry leaders
+            through strategic design and digital marketing.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>dhanabal@gmail.com</li>
+            <li>+91 7418442735</li>
+            <li>Chennai | Coimbatore</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dropsearch. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script>
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Thank you! Your message has been sent.');
-      form.reset();
-    });
+   <script>
+    const form = document.getElementById('contactForm'); // or document.querySelector('.contact-form')
+    if (form) { // check if form exists
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thank you! Your message has been sent.');
+        form.reset();
+      });
+    }
   </script>
 
 </body>
+
 </html>
